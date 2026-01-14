@@ -84,17 +84,6 @@ footer {
     z-index: 2;
 }
 
-/* Styling untuk tagline di bawah */
-.tagline {
-    position: absolute;
-    bottom: 30px;
-    left: 40%;
-    transform: translateX(-50%);
-    font-style: italic;
-    color: #888;
-    font-size: 16px;
-}
-
 .logo img {
     height: 45px;
     cursor: pointer;
@@ -152,6 +141,7 @@ menu-grid {
     font-size: 42px;
     margin-bottom: 20px;
     margin-top: 70px;
+    text-align: center;
 }
 
 .menu-note {
@@ -582,6 +572,12 @@ menu-grid {
     font-size: 14px;
     font-weight: 600;
     margin: 0;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #7faaba;
 }
 
 /* Responsive untuk tablet dan mobile */
