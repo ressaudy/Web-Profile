@@ -252,6 +252,29 @@ menu-grid {
     }
 }
 
+@media (max-width: 600px) {
+    .main-navbar {
+        padding: 12px 16px;
+    }
+
+    nav {
+        display: flex;
+        gap: 16px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+}
+
+
 /* ===== STYLING UNTUK SOSIAL MEDIA SECTION ===== */
 
 .sosmed-section {
