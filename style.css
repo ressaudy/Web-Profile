@@ -1,0 +1,590 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: #fff;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Styling untuk bagian home - Layout seperti gambar */
+#home {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+}
+
+/* Styling untuk teks utama */
+#home .main-text {
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+#home h1 {
+    font-family: 'Montaser Arabic', cursive;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#home h3 {
+    font-size: 24px;
+    color: #7faaba;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#home p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Styling untuk hero image di latar belakang */
+.hero-img {
+    width: 420px;
+    max-width: 40%;
+    height: auto;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk footer/navigation di bawah teks */
+.text-nav {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Styling untuk tagline di bawah */
+.tagline {
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    transform: translateX(-50%);
+    font-style: italic;
+    color: #888;
+    font-size: 16px;
+}
+
+.logo img {
+    height: 45px;
+    cursor: pointer;
+}
+
+.main-navbar {
+    background: #7faaba;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 14px;          /* BIAR ADA AREA HOVER */
+    border-radius: 6px;
+    transition: background 0.25s ease;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+menu-grid {
+    margin-top: 30px;
+}
+
+.menu-grid img {
+    width: 100%;       /* SAMAIN SEMUA */
+    object-fit: cover;  /* Biar ga gepeng */
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Styling untuk section lainnya */
+.section h1 {
+    font-family: 'Montaser Arabic', cursive;
+    font-size: 42px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.menu-note {
+    margin-top: 25px;
+    font-style: italic;
+    color: #666;
+}
+
+
+.social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+.center {
+    text-align: center;
+}
+
+.welcome-logo {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styling khusus untuk section yang hidden */
+.section.hidden {
+    display: none;
+}
+
+.section:not(.hidden) {
+    display: block;
+}
+
+/* .section:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
+
+/* Untuk tampilan mobile/tablet */
+@media (max-width: 1024px) {
+    .hero-img {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 80%;
+        margin-top: 30px;
+        order: 2;
+    }
+    
+    #home {
+        flex-direction: column;
+    }
+    
+    .text-nav {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 36px;
+    }
+    
+    #home h3 {
+        font-size: 20px;
+    }
+    
+    #home p {
+        font-size: 16px;
+    }
+    
+    .hero-img {
+        max-width: 90%;
+    }
+    
+    .text-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ===== STYLING UNTUK SOSIAL MEDIA SECTION ===== */
+
+.sosmed-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sosmed-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.sosmed-grid {
+    margin-top: 38px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #7faaba;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.sosmed-grid {
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Social Cards */
+.social-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.social-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-card:hover {
+    border-color: #e1306c;
+}
+
+.tiktok-card:hover {
+    border-color: #000000;
+}
+
+.social-card-content {
+    text-align: center;
+    width: 100%;
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.social-platform {
+    font-size: 22px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.social-handle {
+    font-size: 12px;
+    color: #7faaba;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.social-description {
+    color: #666;
+    font-size: 11px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    min-height: 30px;
+}
+
+.btn-social {
+    display: inline-block;
+    padding: 7px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border: none;
+}
+
+.instagram-btn:hover {
+    background: linear-gradient(45deg, #e08022 0%, #d5552b 25%, #cb2232 50%, #bb1255 75%, #ab0877 100%);
+    color: white;
+    transform: scale(1.05);
+}
+
+.tiktok-btn {
+    background: linear-gradient(45deg, #000000 0%, #25f4ee 100%);
+    color: white;
+    border: none;
+}
+
+.tiktok-btn:hover {
+    background: linear-gradient(45deg, #1a1a1a 0%, #0dd4d4 100%);
+    color: white;
+    transform: scale(1.05);
+}
+
+.connect-text {
+    text-align: center;
+    color: #7faaba;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/* Responsive untuk tablet dan mobile */
+@media (max-width: 768px) {
+    .sosmed-section {
+        padding: 40px 15px !important;
+    }
+    
+    .sosmed-section h1 {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .social-card {
+        padding: 30px 20px;
+    }
+    
+    .social-platform {
+        font-size: 28px;
+    }
+    
+    .social-handle {
+        font-size: 16px;
+    }
+    
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .btn-social {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+/* ===== STYLING UNTUK MENU SECTION ===== */
+
+.menu-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.menu-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.menu-section h1 {
+    color: #333;
+    font-family: 'Montaser Arabic', cursive;
+    font-size: 40px;
+    margin-bottom: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.menu-subtitle {
+    color: #7faaba;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.menu-grid {
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Menu Cards */
+.menu-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.menu-card-image {
+    aspect-ratio: 3 / 4; /* cocok buat poster menu */
+    overflow: hidden;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-card:hover .menu-card-image img {
+    transform: scale(1.05);
+}
+
+.menu-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+    padding: 12px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-card-overlay {
+    transform: translateY(0);
+}
+
+.menu-card-overlay p {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-footer {
+    text-align: center;
+    padding: 0;
+    border-top: none;
+}
+
+.menu-note {
+    color: #7faaba;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.menu-footer {
+    text-align: center;
+    border-top: 2px solid #7faaba;
+}
+
+.menu-note {
+    color: #7faaba;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive untuk tablet dan mobile */
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 40px 15px !important;
+    }
+    
+    .menu-section h1 {
+        font-size: 36px;
+    }
+    
+    .menu-subtitle {
+        font-size: 16px;
+    }
+    
+    .menu-card-image {
+        height: 220px;
+    }
+    
+    .menu-card-overlay {
+        padding: 20px 15px;
+        min-height: 80px;
+    }
+    
+    .menu-card-overlay p {
+        font-size: 16px;
+    }
+}
